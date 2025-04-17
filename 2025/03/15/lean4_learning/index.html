@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>lean4学习笔记 | KEN</title><meta name="author" content="Ken"><meta name="copyright" content="Ken"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#e1d5a5"><meta name="description" content="1. 定理和编程 1.1. 类型定义 1.1.1 自然数的定义 123inductive Nat: Type where	| zero:Nat	| succ:Nat \to Nat  第一行代表着我们要定义一个新的类型叫做Nat代表自然数 第二行和第三行声明了两个构造子,Nat.zero和Nat.succ可以用来构造Nat的值  递归的基项是zero 第二项是递归的 ![[Pasted image">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>lean4学习笔记 | KEN</title><meta name="author" content="Ken"><meta name="copyright" content="Ken"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="1. 定理和编程 1.1. 类型定义 1.1.1 自然数的定义 123inductive Nat: Type where	| zero:Nat	| succ:Nat \to Nat  第一行代表着我们要定义一个新的类型叫做Nat代表自然数 第二行和第三行声明了两个构造子,Nat.zero和Nat.succ可以用来构造Nat的值  递归的基项是zero 第二项是递归的 ![[Pasted image">
 <meta property="og:type" content="article">
 <meta property="og:title" content="lean4学习笔记">
 <meta property="og:url" content="https://ken1301225.github.io/2025/03/15/lean4_learning/index.html">
@@ -83,13 +83,13 @@
       const activateDarkMode = () => {
         document.documentElement.setAttribute('data-theme', 'dark')
         if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#e1d5a5')
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
         }
       }
       const activateLightMode = () => {
         document.documentElement.setAttribute('data-theme', 'light')
         if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#e1d5a5')
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
         }
       }
 

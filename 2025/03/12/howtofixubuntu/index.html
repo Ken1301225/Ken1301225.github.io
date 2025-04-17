@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>修复ubuntu网络断开 | KEN</title><meta name="author" content="Ken"><meta name="copyright" content="Ken"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#e1d5a5"><meta name="description" content="问题描述 在ubuntu的终端输入命令ifconfig弹出127.0.0.1而没有虚拟机的ip地址, 如下图所示  解决方案  在终端输入sudo dhclient -v此时再输入ifconfig虚拟机ip地址就出现了  主机ping一下虚拟机ip就能ping到了 如果还是不行,   可以在主机的命令行里输入ipconfig -all查看虚拟机的ip地址和在虚拟机里的ip地址是不是一样的">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>修复ubuntu网络断开 | KEN</title><meta name="author" content="Ken"><meta name="copyright" content="Ken"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="问题描述 在ubuntu的终端输入命令ifconfig弹出127.0.0.1而没有虚拟机的ip地址, 如下图所示  解决方案  在终端输入sudo dhclient -v此时再输入ifconfig虚拟机ip地址就出现了  主机ping一下虚拟机ip就能ping到了 如果还是不行,   可以在主机的命令行里输入ipconfig -all查看虚拟机的ip地址和在虚拟机里的ip地址是不是一样的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="修复ubuntu网络断开">
 <meta property="og:url" content="https://ken1301225.github.io/2025/03/12/howtofixubuntu/index.html">
@@ -83,13 +83,13 @@
       const activateDarkMode = () => {
         document.documentElement.setAttribute('data-theme', 'dark')
         if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#e1d5a5')
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
         }
       }
       const activateLightMode = () => {
         document.documentElement.setAttribute('data-theme', 'light')
         if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#e1d5a5')
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
         }
       }
 

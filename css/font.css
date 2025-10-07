@@ -1,8 +1,8 @@
 @font-face{
-    font-family: 'c16xcnb';
+    font-family: 'LXGWWenKai';
     font-display: swap;
-    src: url('/font/c16xcnb.ttf') format("truetype");
+    src: url('/font/LXGWWenKai.ttf') format("truetype");
 }
 body {
-    font-family: 'c16xcnb';
+    font-family: 'LXGWWenKai';
 }

@@ -4,6 +4,11 @@
 }
 
 #recent-posts>.recent-post-item {
+    background-color: #e9eaf0;
+    border-radius: 12px;
+}
+
+.card {
     background-color: #e9eaf0; 
     border-radius: 12px;
 }

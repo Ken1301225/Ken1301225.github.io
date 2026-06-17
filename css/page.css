@@ -28,7 +28,7 @@ div#archive {
 /* ===== 代码块:近乎透明背景,只靠极淡边框界定,融入卡片 ===== */
 :root {
     --hl-color: #374452;
-    --hl-bg: rgba(0, 0, 0, 0.025);
+    --hl-bg: transparent;
     --hltools-bg: transparent;
     --hltools-color: rgba(0, 0, 0, 0.32);
     --hlnumber-bg: transparent;
@@ -88,7 +88,7 @@ div#archive {
 /* 暗色模式:也用近乎透明背景,暗底白字 */
 [data-theme='dark'] {
     --hl-color: rgba(255, 255, 255, 0.75);
-    --hl-bg: rgba(255, 255, 255, 0.04);
+    --hl-bg: transparent;
     --hltools-bg: transparent;
     --hltools-color: rgba(255, 255, 255, 0.3);
     --hlnumber-bg: transparent;

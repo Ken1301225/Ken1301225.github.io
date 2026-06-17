@@ -1,5 +1,5 @@
 #aside-content .card-widget {
-    background-color: #e9eaf0; 
+    background-color: #e9eaf0;
     border-radius: 12px;
 }
 
@@ -8,17 +8,112 @@
     border-radius: 12px;
 }
 
-strong, b {
-    font-weight: 500;          /* 加粗 */
-    color: #d8d2c3;            /* 修改文字颜色 */
-    background-color: #5b668e; /* 添加背景色 */
-    padding: 0 4px;            /* 让背景色不贴边 */
-    border-radius: 4px;        /* 圆角柔和一些 */
-}
-
 div#post,
 div#page,
 div#archive {
-    background-color: #e9eaf0; 
+    background-color: #e9eaf0;
     border-radius: 12px;
+}
+
+/* ===== 加粗:干净的字重 + 主题色,不再用色块标签 ===== */
+#article-container strong,
+#article-container b {
+    font-weight: 700;
+    color: #2a3050;
+    background: none;
+    padding: 0;
+    box-shadow: inset 0 -0.18em 0 rgba(91, 102, 142, 0.16);
+}
+
+/* ===== 代码块:近乎透明背景,只靠极淡边框界定,融入卡片 ===== */
+:root {
+    --hl-color: #374452;
+    --hl-bg: rgba(0, 0, 0, 0.025);
+    --hltools-bg: transparent;
+    --hltools-color: rgba(0, 0, 0, 0.32);
+    --hlnumber-bg: transparent;
+    --hlnumber-color: rgba(0, 0, 0, 0.2);
+    --hlscrollbar-bg: rgba(0, 0, 0, 0.1);
+    --hlexpand-bg: linear-gradient(180deg, rgba(233, 234, 240, 0.4), rgba(233, 234, 240, 0.85));
+}
+
+#article-container figure.highlight {
+    box-shadow: none !important;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 6px;
+    margin: 1.2em 0;
+}
+
+#article-container .highlight-tools {
+    min-height: 20px;
+    height: 1.85em;
+    font-size: 0.9em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+#article-container .highlight-tools .code-lang {
+    font-size: 0.95em;
+    text-transform: none;
+    font-weight: 500;
+    opacity: 0.45;
+}
+
+#article-container .highlight-tools i {
+    padding: 3px;
+    opacity: 0.4;
+    transition: opacity .2s;
+}
+
+#article-container .highlight-tools i:hover {
+    opacity: 1;
+}
+
+/* 行内代码:近乎透明,融入正文 */
+#article-container code {
+    background: rgba(0, 0, 0, 0.05);
+    color: #3d4561;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: 0.88em;
+}
+
+#article-container pre code,
+#article-container figure.highlight code {
+    background: none;
+    color: var(--hl-color);
+    padding: 0;
+    font-size: inherit;
+}
+
+/* 暗色模式:也用近乎透明背景,暗底白字 */
+[data-theme='dark'] {
+    --hl-color: rgba(255, 255, 255, 0.75);
+    --hl-bg: rgba(255, 255, 255, 0.04);
+    --hltools-bg: transparent;
+    --hltools-color: rgba(255, 255, 255, 0.3);
+    --hlnumber-bg: transparent;
+    --hlnumber-color: rgba(255, 255, 255, 0.2);
+    --hlscrollbar-bg: rgba(255, 255, 255, 0.1);
+    --hlexpand-bg: linear-gradient(180deg, rgba(18, 18, 18, 0.4), rgba(18, 18, 18, 0.85));
+}
+
+[data-theme='dark'] #article-container figure.highlight {
+    border-color: rgba(255, 255, 255, 0.06);
+}
+
+[data-theme='dark'] #article-container .highlight-tools {
+    border-bottom-color: rgba(255, 255, 255, 0.06);
+}
+
+[data-theme='dark'] #article-container .highlight-tools i {
+    opacity: 0.35;
+}
+
+[data-theme='dark'] #article-container .highlight-tools i:hover {
+    opacity: 1;
+}
+
+[data-theme='dark'] #article-container code {
+    background: rgba(255, 255, 255, 0.07);
+    color: rgba(255, 255, 255, 0.7);
 }

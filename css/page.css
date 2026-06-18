@@ -25,12 +25,46 @@ div#archive {
     box-shadow: inset 0 -0.18em 0 rgba(91, 102, 142, 0.16);
 }
 
+/* ===== 正文标题:给低级标题设置下限,h6 仍然大于正文 ===== */
+#article-container h1 {
+    font-size: 1.9em;
+}
+
+#article-container h2 {
+    font-size: 1.65em;
+}
+
+#article-container h3 {
+    font-size: 1.42em;
+}
+
+#article-container h4 {
+    font-size: 1.25em;
+}
+
+#article-container h5 {
+    font-size: 1.16em;
+}
+
+#article-container h6 {
+    font-size: 1.1em;
+}
+
+#article-container h1,
+#article-container h2,
+#article-container h3,
+#article-container h4,
+#article-container h5,
+#article-container h6 {
+    line-height: 1.35;
+}
+
 /* ===== 代码块:近乎透明背景,只靠极淡边框界定,融入卡片 ===== */
 :root {
     --hl-color: #374452;
     --hl-bg: transparent;
     --hltools-bg: transparent;
-    --hltools-color: rgba(0, 0, 0, 0.32);
+    --hltools-color: rgba(42, 48, 80, 0.72);
     --hlnumber-bg: transparent;
     --hlnumber-color: rgba(0, 0, 0, 0.2);
     --hlscrollbar-bg: rgba(0, 0, 0, 0.1);
@@ -54,8 +88,9 @@ div#archive {
 #article-container .highlight-tools .code-lang {
     font-size: 0.95em;
     text-transform: none;
-    font-weight: 500;
-    opacity: 0.45;
+    font-weight: 600;
+    color: #2a3050;
+    opacity: 0.82;
 }
 
 #article-container .highlight-tools i {
@@ -90,7 +125,7 @@ div#archive {
     --hl-color: rgba(255, 255, 255, 0.75);
     --hl-bg: transparent;
     --hltools-bg: transparent;
-    --hltools-color: rgba(255, 255, 255, 0.3);
+    --hltools-color: rgba(255, 255, 255, 0.72);
     --hlnumber-bg: transparent;
     --hlnumber-color: rgba(255, 255, 255, 0.2);
     --hlscrollbar-bg: rgba(255, 255, 255, 0.1);
@@ -111,6 +146,11 @@ div#archive {
 
 [data-theme='dark'] #article-container .highlight-tools i:hover {
     opacity: 1;
+}
+
+[data-theme='dark'] #article-container .highlight-tools .code-lang {
+    color: rgba(255, 255, 255, 0.82);
+    opacity: 0.9;
 }
 
 [data-theme='dark'] #article-container code {

@@ -3693,7 +3693,7 @@ figure.highlight pre .javascript .function {
     display: block !important;
   }
 }
-#aside-content #card-toc .toc-content:not(.is-expand) .toc-item.active .toc-child {
+#aside-content #card-toc .toc-content:not(.is-expand) .toc-item.active > .toc-child {
   display: block;
 }
 #aside-content #card-toc .toc-content ol,

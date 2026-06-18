@@ -69,6 +69,33 @@ div#archive {
     --hlnumber-color: rgba(0, 0, 0, 0.2);
     --hlscrollbar-bg: rgba(0, 0, 0, 0.1);
     --hlexpand-bg: linear-gradient(180deg, rgba(233, 234, 240, 0.4), rgba(233, 234, 240, 0.85));
+    --article-table-border: rgba(91, 102, 142, 0.42);
+    --article-table-header-bg: rgba(91, 102, 142, 0.1);
+    --article-table-row-hover: rgba(91, 102, 142, 0.06);
+}
+
+/* 正文表格:提高边框对比度,避开代码块内部的 highlight 表格 */
+#article-container > table,
+#article-container .table-wrap > table {
+    border-top-color: var(--article-table-border);
+    border-left-color: var(--article-table-border);
+}
+
+#article-container > table th,
+#article-container > table td,
+#article-container .table-wrap > table th,
+#article-container .table-wrap > table td {
+    border-color: var(--article-table-border);
+}
+
+#article-container > table thead,
+#article-container .table-wrap > table thead {
+    background: var(--article-table-header-bg);
+}
+
+#article-container > table tbody tr:hover,
+#article-container .table-wrap > table tbody tr:hover {
+    background: var(--article-table-row-hover);
 }
 
 #article-container figure.highlight {
@@ -136,6 +163,9 @@ div#archive {
     --hlnumber-color: rgba(255, 255, 255, 0.2);
     --hlscrollbar-bg: rgba(255, 255, 255, 0.1);
     --hlexpand-bg: linear-gradient(180deg, rgba(18, 18, 18, 0.4), rgba(18, 18, 18, 0.85));
+    --article-table-border: rgba(255, 255, 255, 0.2);
+    --article-table-header-bg: rgba(255, 255, 255, 0.07);
+    --article-table-row-hover: rgba(255, 255, 255, 0.05);
 }
 
 [data-theme='dark'] #article-container figure.highlight {

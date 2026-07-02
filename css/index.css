@@ -3538,7 +3538,26 @@ figure.highlight pre .javascript .function {
   color: #374476;
 }
 .posts-list-page #recent-posts {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 0 1px;
   width: 100%;
+  background: #13264d;
+}
+@media screen and (max-width: 768px) {
+  .posts-list-page #recent-posts {
+    padding: 0 6px 1px;
+  }
+}
+#body-wrap.type-posts {
+  background: #13264d;
+}
+#body-wrap.type-posts #content-inner {
+  background: #13264d;
+}
+#body-wrap.type-posts #page {
+  background: #13264d;
 }
 #article-container .shuoshuo-item {
   margin-bottom: 20px;
